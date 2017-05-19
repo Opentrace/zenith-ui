@@ -2,6 +2,7 @@ node_modules
 npm-debug.log
 build
 coverage
+__snapshots__
 .eslintcache
 
 # Sublime project files
