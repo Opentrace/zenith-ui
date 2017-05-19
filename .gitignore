@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+build
+coverage
+.eslintcache
+
+# Sublime project files
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_STORE
