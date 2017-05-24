@@ -12,13 +12,14 @@
   "scripts": {
     "start": "npm run browser:development",
     "browser:development": "webpack-dev-server --config webpack.dev.config.js --progress --colors",
-    "build": "NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --profile"
+    "build": "npm run clean && NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --profile",
+    "clean": "rimraf build"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "react": "^15.5.4",
+    "react-document-title": "^2.0.3",
     "react-dom": "^15.5.4",
-    "react-title-component": "^1.0.1",
     "simple-assign": "^0.1.0"
   },
   "devDependencies": {
@@ -41,6 +42,7 @@
     "react-router": "^4.1.1",
     "react-swipeable-views": "^0.12.2",
     "recast": "^0.12.3",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.17.0",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"

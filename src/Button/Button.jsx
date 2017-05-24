@@ -1,38 +1,68 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
+import * as colors from '../styles/colors';
+import spacing from '../styles/spacing';
 
-const STATUS = {
-  HOVERED: 'hovered',
-  NORMAL: 'normal',
-};
-
-export default class Button extends React.Component {
+class Button extends React.Component {
   constructor(props) {
     super(props);
-
-    this._onMouseEnter = this._onMouseEnter.bind(this);
-    this._onMouseLeave = this._onMouseLeave.bind(this);
-
-    this.state = {
-      class: STATUS.NORMAL
-    };
   }
 
-  _onMouseEnter() {
-    this.setState({class: STATUS.HOVERED});
+  getStyles() {
+    return {
+      base: {
+        borderColor: 'transparent',
+        borderRadius: '2px',
+        borderStyle: 'solid',
+        borderWidth: '1px',
+        color: colors.white,
+        cursor: 'pointer',
+        fontSize: '16px',
+        padding: spacing.desktopGutterMini,
+        margin: '0 6px',
+        transition: 'all 0.3s ease',
+        ':hover': {
+          backgroundColor: colors.white
+        }
+      },
+      primary: {
+        backgroundColor: colors.grey,
+        ':hover': {
+          color: colors.grey,
+          borderColor: colors.grey,
+        }
+      },
+      warning: {
+        backgroundColor: colors.yellow,
+        ':hover': {
+          color: colors.yellow,
+          borderColor: colors.yellow,
+        }
+      },
+      info: {
+        backgroundColor: colors.blue,
+        ':hover': {
+          color: colors.blue,
+          borderColor: colors.blue,
+        }
+      },
+      danger: {
+        backgroundColor: colors.red,
+        ':hover': {
+          color: colors.red,
+          borderColor: colors.red,
+        }
+      }
+    }
   }
-
-  _onMouseLeave() {
-    this.setState({class: STATUS.NORMAL});
-  }
-
   render() {
-    const { children } = this.props;
+    const { children, type } = this.props;
+    const styles = this.getStyles();
     return (
       <button
-        className={ this.state.class }
-        onMouseEnter={ this._onMouseEnter }
-        onMouseLeave={ this._onMouseLeave }>
+        onClick={ this.props.onClick }
+        style={[ styles.base, styles[type] ]}>
         { children }
       </button>
     );
@@ -40,5 +70,13 @@ export default class Button extends React.Component {
 }
 
 Button.propTypes = {
-  name: PropTypes.string,
+  type: PropTypes.oneOf(['primary', 'warning', 'danger', 'info']),
+  onClick: PropTypes.func,
 };
+
+Button.defaultProps = {
+  type: 'primary',
+  onClick: () => {},
+};
+
+export default Radium(Button);
