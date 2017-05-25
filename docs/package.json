@@ -13,6 +13,7 @@
     "start": "npm run browser:development",
     "browser:development": "webpack-dev-server --config webpack.dev.config.js --progress --colors",
     "build": "npm run clean && NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --profile",
+    "gh-pages:build": "node ./gh-pages-build.js",
     "clean": "rimraf build"
   },
   "dependencies": {
