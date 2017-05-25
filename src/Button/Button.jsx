@@ -3,15 +3,9 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import Styles from './Button.Styles';
 
-console.log(Styles);
-
 class Button extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const { children, type } = this.props;
+    const { children, type, onClick } = this.props;
     return (
       <button
         onClick={ this.props.onClick }
