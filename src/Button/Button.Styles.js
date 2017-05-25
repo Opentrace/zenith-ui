@@ -1,63 +1,44 @@
-import * as colors from '../styles/colors';
+import { palette, white } from '../styles/colors';
+import typography from '../styles/typography';
 import spacing from '../styles/spacing';
 
 const Styles = {
   base: {
+    ...typography,
+    backgroundColor: palette.primaryColor,
     borderColor: 'transparent',
-    borderRadius: '2px',
+    borderRadius: typography.borderRadius,
     borderStyle: 'solid',
     borderWidth: '1px',
-    color: colors.white,
+    color: white,
     cursor: 'pointer',
     paddingTop: spacing.desktopGutterMini,
     paddingRight: spacing.desktopGutterMini,
     paddingBottom: spacing.desktopGutterMini,
-    paddingLeft: spacing.desktopGutterMini,
-    marginLeft: spacing.desktopGutterMini,
-    marginRight: spacing.desktopGutterMini,
     overflow: 'visible',
     textTransform: 'none',
     transition: 'all 0.3s ease',
     WebkitAppearance: 'button',
     ':hover': {
-      backgroundColor: colors.white
+      backgroundColor: white,
+      color: palette.primaryColor,
+      borderColor: palette.primaryColor,
     },
     '::-moz-focus-inner': {
       borderStyle: 'none',
       padding: 0
-    },
-    ':-moz-focusring': {
-      outline: '1px dotted ButtonText'
     }
   },
-  primary: {
-    backgroundColor: colors.grey,
+  inverse: {
+    backgroundColor: white,
+    color: palette.primaryColor,
+    borderColor: palette.primaryColor,
     ':hover': {
-      color: colors.grey,
-      borderColor: colors.grey,
+      backgroundColor: palette.primaryColor,
+      color: white,
+      borderColor: white,
     }
   },
-  warning: {
-    backgroundColor: colors.yellow,
-    ':hover': {
-      color: colors.yellow,
-      borderColor: colors.yellow,
-    }
-  },
-  info: {
-    backgroundColor: colors.blue,
-    ':hover': {
-      color: colors.blue,
-      borderColor: colors.blue,
-    }
-  },
-  danger: {
-    backgroundColor: colors.red,
-    ':hover': {
-      color: colors.red,
-      borderColor: colors.red,
-    }
-  }
 };
 
 export default Styles;

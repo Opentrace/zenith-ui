@@ -2,21 +2,25 @@ import React from 'react';
 import DocumentTitle from 'react-document-title';
 import Grid, { Row, Column } from 'zenith-ui/Grid';
 import Button from 'zenith-ui/Button'
+import Reset from 'zenith-ui/Reset'
 
 export default class App extends React.Component {
   render() {
     return (
       <div>
+        <Reset />
         <DocumentTitle title='Zenith UI Documentation' />
         <Grid>
           <Row>
+            <h1>Zenith UI</h1>
+          </Row>
+          <Row>
             <Column>
-              <Button>Primary</Button>
-              <Button type="warning">Warning</Button>
+              <Button>This is a Button</Button>
             </Column>
-            
-            <Button type="info">Info</Button>
-            <Button type="danger">Danger</Button>
+            <Column>
+              <Button inverse>This is an 'inverse' Button</Button>
+            </Column>
           </Row>
         </Grid>
       </div>

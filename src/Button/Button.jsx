@@ -5,11 +5,16 @@ import Styles from './Button.Styles';
 
 class Button extends React.Component {
   render() {
-    const { children, type, onClick } = this.props;
+    const { children, inverse, onClick } = this.props;
+    let styles = [Styles.base];
+    if (inverse) {
+      styles.push(Styles.inverse);
+    }
+
     return (
       <button
         onClick={ this.props.onClick }
-        style={[ Styles.base, Styles[type] ]}>
+        style={ styles }>
         { children }
       </button>
     );
@@ -17,12 +22,12 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['primary', 'warning', 'danger', 'info']),
+  inverse: PropTypes.bool,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
-  type: 'primary',
+  inverse: false,
   onClick: () => {},
 };
 

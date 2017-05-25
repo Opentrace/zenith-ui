@@ -1,9 +1,16 @@
-export const black = "#282c34"
+import { darken } from '../utils/colorManipulator';
+
+export const baseOrange = "rgba(238, 99, 82, 1)";
+export const baseGreen = "rgba(89, 205, 144, 1)";
+export const baseBlue = "rgba(63, 167, 214, 1)";
+export const baseYellow = "rgba(250, 192, 94, 1)";
+export const baseGray = "rgba(104, 105, 99, 1)";
 export const white = "#fff"
-export const blue = "#61afef"
-export const yellow = "#e5c07b"
-export const red = "#e06c75"
-export const green = "#98c379"
-export const grey = "#3e4452"
-export const lightGrey = "#5c6370"
-export const lighterGrey = "#aab2bf"
+export const palette = {
+  primaryColor: baseOrange,
+  accentColor1: baseBlue,
+  accentColor2: baseYellow,
+  accentColor3: baseGreen,
+  primaryTextColor: baseGray,
+  secondaryTextColor: darken(baseGray, 0.5),
+};

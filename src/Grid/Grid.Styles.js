@@ -13,6 +13,8 @@ const Styles = {
     flexWrap: 'wrap',
     marginRight: spacing.desktopGutterMini,
     marginLeft: spacing.desktopGutterMini,
+    paddingTop: spacing.desktopGutterMini,
+    paddingBottom: spacing.desktopGutterMini,
   },
   column: {
     base: {
