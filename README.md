@@ -10,7 +10,7 @@ Documentation coming...eventually.
 ## Components
 As components are added they will be checked off this list. That doesn't mean they're "done", it just means that a functional version exists. They may be expanded on later. More components may be added to this list. This is really just a guideline for us to follow while we build things. We'll most likely add components as we need them in other projects.
 
-- [ ] Button
+- [x] Button
 - [ ] Grid (flexbox layout)
 - [ ] Modal/Dialog
 - [ ] Tooltip
