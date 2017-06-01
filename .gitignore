@@ -1,7 +1,6 @@
 node_modules
 npm-debug.log
 coverage
-build
 __snapshots__
 .eslintcache
 
