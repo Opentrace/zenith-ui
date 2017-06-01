@@ -5,11 +5,16 @@ import Styles from './Button.Styles';
 
 class Button extends React.Component {
   render() {
-    const { children, inverse, onClick } = this.props;
-    let styles = [Styles.base];
+    const { children, inverse, raised, onClick, size } = this.props;
+    let styles = [Styles.base, Styles.sizing[size]];
     if (inverse) {
       styles.push(Styles.inverse);
     }
+
+    if (raised) {
+      styles.push(Styles.raised);
+    }
+
     return (
       <button
         onClick={ this.props.onClick }
@@ -27,6 +32,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   inverse: false,
+  size: 'medium',
+  raised: false,
   onClick: () => {},
 };
 

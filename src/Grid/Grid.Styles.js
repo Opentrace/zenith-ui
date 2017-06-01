@@ -11,17 +11,18 @@ const Styles = {
     flex: '0 1 auto',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginRight: spacing.desktopGutterMini,
-    marginLeft: spacing.desktopGutterMini,
-    paddingTop: spacing.desktopGutterMini,
-    paddingBottom: spacing.desktopGutterMini,
+    alignItems: 'center',
+    marginRight: spacing.tiny,
+    marginLeft: spacing.tiny,
+    paddingTop: spacing.tiny,
+    paddingBottom: spacing.tiny,
   },
   column: {
     base: {
       boxSizing: 'border-box',
       flex: '0 0 auto',
-      paddingRight: spacing.desktopGutterMini,
-      paddingLeft: spacing.desktopGutterMini,
+      paddingRight: spacing.tiny,
+      paddingLeft: spacing.tiny,
     },
   }
 };

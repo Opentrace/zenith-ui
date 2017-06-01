@@ -36,7 +36,7 @@ const Styles = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     maxWidth: 600,
-    padding: spacing.desktopGutterLess,
+    padding: spacing.tiny,
     boxShadow: shadows.default,
   },
   header: {
@@ -56,8 +56,8 @@ const Styles = {
   closeButton: {
     color: palette.primaryTextColor,
     position: 'fixed',
-    top: spacing.desktopGutterLess,
-    right: spacing.desktopGutterLess,
+    top: spacing.small,
+    right: spacing.small,
     cursor: 'pointer',
     border: 'none',
     backgroundColor: white,

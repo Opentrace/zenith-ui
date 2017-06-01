@@ -18,14 +18,53 @@ export default class App extends React.Component {
             <Row>
               <h1>Zenith UI</h1>
             </Row>
+            <Row><h3>Buttons</h3></Row>
+            
             <Row>
               <Column>
-                <Button>This is a Button</Button>
+                <Button>Normal</Button>
               </Column>
               <Column>
-                <Button inverse>This is an 'inverse' Button</Button>
+                <Button inverse>Inverse</Button>
               </Column>
             </Row>
+
+            <Row>
+              <h4>Button Sizing</h4>
+            </Row>
+
+            <Row>
+              <Column>
+                <Button size="tiny">Tiny</Button>
+              </Column>
+              <Column>
+                <Button size="small">Small</Button>
+              </Column>
+              <Column>
+                <Button size="medium">Medium (default)</Button>
+              </Column>
+              <Column>
+                <Button size="large">Large</Button>
+              </Column>
+              <Column>
+                <Button size="huge">Huge</Button>
+              </Column>
+              <Column>
+                <Button size="jumbo">Jumbo</Button>
+              </Column>
+            </Row>
+
+            <Row><h4>Raised Buttons</h4></Row>
+            
+            <Row>
+              <Column>
+                <Button raised>Normal</Button>
+              </Column>
+              <Column>
+                <Button inverse raised>Inverse</Button>
+              </Column>
+            </Row>
+
             <Row>
               <Column>
                 <Dialog title="Dialog" openByClickOn={ modalButton }>
