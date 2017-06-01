@@ -15,10 +15,9 @@ for (let factor in sizingFactors) {
   fontSizes[factor] = Math.round(baseFontSize * sizingFactors[factor]);
 }
 
-export default fontSizes;
-export const fontSizeKeys = Object.keys(sizingFactors);
+const fontSizeKeys = Object.keys(sizingFactors);
 
-export function getFontSize(size='medium', unit='') {
+function getFontSize(size='medium', unit='') {
   const validUnit = (unit === '' ||unit === 'px' || unit === 'em');
   warning(validUnit, 'Units must be either "px", "em" or empty');
   if (unit === 'em') {
@@ -26,3 +25,10 @@ export function getFontSize(size='medium', unit='') {
   }
   return `${ fontSizes[size] }${ unit }`;
 }
+
+export {
+  fontSizes as default,
+  baseFontSize,
+  getFontSize,
+  fontSizeKeys,
+};

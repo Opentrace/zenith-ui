@@ -8,7 +8,7 @@ class Row extends React.Component {
     const { className, tagName, children } = this.props;
     const RowTag = tagName;
     return (
-      <RowTag className={ className } style={[ Styles.row ]}>
+      <RowTag className={ className } style={[ Styles.row.base ]}>
         { children }
       </RowTag>
     );

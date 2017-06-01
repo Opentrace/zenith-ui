@@ -8,7 +8,7 @@ class Grid extends React.Component {
     const { className, children, tagName } = this.props;
     const GridTag = tagName;
     return (
-      <GridTag className={ className } style={[Styles.grid]}>
+      <GridTag className={ className } style={[ Styles.grid.base ]}>
         { children }
       </GridTag>
     );

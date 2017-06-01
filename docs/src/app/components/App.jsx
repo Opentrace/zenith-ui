@@ -16,9 +16,15 @@ export default class App extends React.Component {
           <DocumentTitle title='Zenith UI Documentation' />
           <Grid>
             <Row>
-              <h1>Zenith UI</h1>
+              <Column>
+                <h1>Zenith UI</h1>
+              </Column>
             </Row>
-            <Row><h3>Buttons</h3></Row>
+            <Row>
+              <Column>
+                <h3>Buttons</h3>
+              </Column>
+            </Row>
             
             <Row>
               <Column>
@@ -30,7 +36,9 @@ export default class App extends React.Component {
             </Row>
 
             <Row>
-              <h4>Button Sizing</h4>
+              <Column>
+                <h4>Button Sizing</h4>
+              </Column>
             </Row>
 
             <Row>
@@ -54,7 +62,11 @@ export default class App extends React.Component {
               </Column>
             </Row>
 
-            <Row><h4>Raised Buttons</h4></Row>
+            <Row>
+              <Column>
+                <h4>Raised Buttons</h4>
+              </Column>
+            </Row>
             
             <Row>
               <Column>
