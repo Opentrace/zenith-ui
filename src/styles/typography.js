@@ -1,4 +1,3 @@
-import spacing from './spacing';
 import { palette } from './colors';
 import globals from './globals';
 

@@ -5,10 +5,10 @@ import Styles from './Grid.Styles';
 
 class Column extends React.Component {
   render() {
-    const { className, tagName, children } = this.props;
+    const { className, tagName, children, span } = this.props;
     const ColumnTag = tagName;
     return (
-      <ColumnTag className={ className } style={[ Styles.column.base,  ]}>
+      <ColumnTag className={ className } style={[ Styles.column.base, Styles.column.span[span] ]}>
         { children }
       </ColumnTag>
     );
@@ -23,6 +23,7 @@ Column.propTypes = {
 
 Column.defaultProps = {
   tagName: 'div',
+  span: 'auto'
 };
 
 export default Radium(Column);

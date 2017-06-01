@@ -1,3 +1,5 @@
+import warning from 'warning';
+
 const baseSpacingUnit = 24;
 const spacingFactors = {
   none: 0,

@@ -1,5 +1,14 @@
 import spacing from '../styles/spacing';
 
+let spans = {};
+for (let i = 1; i <= 12; i++) {
+  console.log(i)
+  spans[i] = {
+    flexBasis: `${(i / 12) * 100}%`,
+    maxWidth: `${(i / 12) * 100}%`,
+  };
+}
+
 const Styles = {
   grid: {
     marginRight: 'auto',
@@ -21,9 +30,13 @@ const Styles = {
     base: {
       boxSizing: 'border-box',
       flex: '0 0 auto',
+      flexGrow: 1,
+      flexBasis: 0,
+      maxWidth: '100%',
       paddingRight: spacing.tiny,
       paddingLeft: spacing.tiny,
     },
+    span: spans
   }
 };
 
