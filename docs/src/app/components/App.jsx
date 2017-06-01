@@ -26,10 +26,12 @@ export default class App extends React.Component {
                 <Button inverse>This is an 'inverse' Button</Button>
               </Column>
             </Row>
+            <Row>
+              <Dialog title="Dialog" openByClickOn={ modalButton }>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laboriosam accusantium facere suscipit, alias accusamus corrupti consequatur at porro, voluptates commodi sed omnis voluptatem, ex officiis illum, architecto fugiat id?
+              </Dialog>
+            </Row>
           </Grid>
-          <Dialog title="Dialog" openByClickOn={ modalButton }>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laboriosam accusantium facere suscipit, alias accusamus corrupti consequatur at porro, voluptates commodi sed omnis voluptatem, ex officiis illum, architecto fugiat id?
-          </Dialog>
         </div>
       </StyleRoot>
     );
