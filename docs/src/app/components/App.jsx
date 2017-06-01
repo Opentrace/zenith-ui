@@ -27,9 +27,11 @@ export default class App extends React.Component {
               </Column>
             </Row>
             <Row>
-              <Dialog title="Dialog" openByClickOn={ modalButton }>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laboriosam accusantium facere suscipit, alias accusamus corrupti consequatur at porro, voluptates commodi sed omnis voluptatem, ex officiis illum, architecto fugiat id?
-              </Dialog>
+              <Column>
+                <Dialog title="Dialog" openByClickOn={ modalButton }>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laboriosam accusantium facere suscipit, alias accusamus corrupti consequatur at porro, voluptates commodi sed omnis voluptatem, ex officiis illum, architecto fugiat id?
+                </Dialog>
+              </Column>
             </Row>
           </Grid>
         </div>
