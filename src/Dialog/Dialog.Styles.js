@@ -1,4 +1,6 @@
 import { palette, baseGray, white } from '../styles/colors';
+import globals from '../styles/globals';
+import shadows from '../styles/shadows';
 import typography from '../styles/typography';
 import spacing from '../styles/spacing';
 import { fade, darken } from '../utils/colorManipulator';
@@ -27,6 +29,7 @@ const Styles = {
     animationName: fadeIn
   },
   inner: {
+    borderRadius: globals.borderRadius,
     backgroundColor: white,
     position: 'absolute',
     top: '50%',
@@ -34,7 +37,7 @@ const Styles = {
     transform: 'translate(-50%, -50%)',
     maxWidth: 600,
     padding: spacing.desktopGutterLess,
-    borderRadius: typography.borderRadius,
+    boxShadow: shadows.default,
   },
   header: {
     fontSize: 18
