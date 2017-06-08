@@ -2,6 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import PropTypes from 'prop-types';
 import Styles from './TitleBar.Styles';
+import { Grid, Cell } from '../Grid';
 
 class TitleBar extends React.Component {
   render() {
@@ -10,20 +11,23 @@ class TitleBar extends React.Component {
     const SubtitleHeading = `h${ subtitleHeadingLevel }`;
     return (
       <div style={[ Styles.base ]}>
-        {
+        <Grid cellVerticalAlign="center">
+          {
           title &&
-          <TitleHeading style={[ Styles.title ]}>
-            { titleLink ? <a style={[ Styles.title.link ] } href={ titleLink }>{ title }</a> : { title }}
-          </TitleHeading>
-        }
-        {
-          subtitle &&
-          <SubtitleHeading style={[ Styles.subtitle ]}>
-            { subtitle }
-          </SubtitleHeading>
-        }
+            <Cell>
+              <TitleHeading style={[ Styles.title ]}>
+                { titleLink ? <a style={[ Styles.title.link ] } href={ titleLink }>{ title }</a> : { title }}
+              </TitleHeading>
+            </Cell>
+          }
+          <Cell align="right">
+            { React.Children.map(children, (child) => React.cloneElement(child, { parent: 'titleBar' }))}
+          </Cell>
+        </Grid>
+        
+        
 
-        { children }
+        
       </div>
     );
   }

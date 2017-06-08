@@ -47,7 +47,7 @@ const config = {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         query: {
-          presets:['react']
+          presets:['react', 'react-hmre']
         },
         exclude: /node_modules/,
       },
