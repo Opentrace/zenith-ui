@@ -1,5 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './components/App.jsx';
+import { HashRouter } from 'react-router-dom';
+import Routes from './Routes';
 
-render(<App />, document.getElementById('app'));
+render(
+  <HashRouter>
+    { Routes }
+  </HashRouter>
+, document.getElementById('app'));

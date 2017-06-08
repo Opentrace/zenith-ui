@@ -13,4 +13,5 @@ export const palette = {
   accentColor3: baseGreen,
   primaryTextColor: darken(baseGray, 0.5),
   secondaryTextColor: baseGray,
+  primaryGray: baseGray,
 };
