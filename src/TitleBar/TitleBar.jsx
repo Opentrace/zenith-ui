@@ -24,10 +24,6 @@ class TitleBar extends React.Component {
             { React.Children.map(children, (child) => React.cloneElement(child, { parent: 'titleBar' }))}
           </Cell>
         </Grid>
-        
-        
-
-        
       </div>
     );
   }

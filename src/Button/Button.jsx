@@ -6,7 +6,11 @@ import Styles from './Button.Styles';
 class Button extends React.Component {
   render() {
     const { children, inverse, raised, onClick, size } = this.props;
-    let styles = [Styles.base, Styles.sizing[size]];
+    let styles = [
+      Styles.base,
+      Styles.sizing[size],
+      ...this.props.style
+    ];
     if (inverse) {
       styles.push(Styles.inverse);
     }

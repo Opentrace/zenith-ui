@@ -1,27 +1,29 @@
 import { palette, white } from '../styles/colors';
 import spacing from '../styles/spacing';
-
+import breakpoints from '../styles/breakpoints';
 const Styles = {
-  base: {},
-  list: {
-    listStyle: 'none',
-    margin: 0,
-    padding: 0,
-    horizontal: {
-      display: 'flex',
+  base: {
+    width: '100%',
+    [`@media screen and (max-width: ${ breakpoints.extraSmall }em)`]: {
+      width: 'inherit'
     }
   },
-  listItem: {
-    padding: `0 ${ spacing.tiny }px`,
-    horizontal: {
-      flex: 1
+  inner: {
+    width: '100%',
+    [`@media screen and (max-width: ${ breakpoints.extraSmall }em)`]: {
+      display: 'none'
     }
   },
   item: {
-    color: white,
+    base: {},
+    titleBar: {
+      color: white
+    }
   },
-  titleBar: {
-
+  button: {
+    [`@media screen and (min-width: ${ breakpoints.extraSmall }em)`]: {
+      display: 'none'
+    }
   }
 };
 
