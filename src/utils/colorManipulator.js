@@ -171,7 +171,6 @@ export function emphasize(color, coefficient = 0.15) {
 export function fade(color, value) {
   color = decomposeColor(color);
   value = clamp(value, 0, 1);
-
   if (color.type === 'rgb' || color.type === 'hsl') {
     color.type += 'a';
   }

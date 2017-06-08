@@ -5,9 +5,9 @@ const sizingFactors = {
   tiny: 0.7,
   small: 0.8,
   medium: 1,
-  large: 2,
-  huge: 3,
-  jumbo: 4,
+  large: 1.5,
+  huge: 2,
+  jumbo: 3,
 };
 
 let fontSizes = {};

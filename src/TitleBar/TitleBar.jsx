@@ -5,7 +5,7 @@ import Styles from './TitleBar.Styles';
 
 class TitleBar extends React.Component {
   render() {
-    const { title, subtitle, titleHeadingLevel, subtitleHeadingLevel } = this.props;
+    const { title, subtitle, titleHeadingLevel, subtitleHeadingLevel, titleLink, children } = this.props;
     const TitleHeading = `h${ titleHeadingLevel }`;
     const SubtitleHeading = `h${ subtitleHeadingLevel }`;
     return (
@@ -13,7 +13,7 @@ class TitleBar extends React.Component {
         {
           title &&
           <TitleHeading style={[ Styles.title ]}>
-            { title }
+            { titleLink ? <a style={[ Styles.title.link ] } href={ titleLink }>{ title }</a> : { title }}
           </TitleHeading>
         }
         {
@@ -22,6 +22,8 @@ class TitleBar extends React.Component {
             { subtitle }
           </SubtitleHeading>
         }
+
+        { children }
       </div>
     );
   }
