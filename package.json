@@ -12,6 +12,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production babel ./src --out-dir ./build --ignore spec.jsx",
     "clean:build": "rimraf build",
+    "lint": "eslint src/**/*",
     "prebuild": "npm run clean:build",
     "deploy:docs": "cd docs && yarn build && cd ../ && git add docs/build && git commit -m \"rebuild docs\" && git subtree push --prefix docs/build origin gh-pages",
     "test": "jest"
@@ -19,6 +20,7 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
     "radium": "^0.19.1",
     "radium-grid": "^2.0.3",
     "react": "^15.5.4",
@@ -42,14 +44,15 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-1": "^6.24.1",
     "cross-env": "^5.0.0",
-    "eslint": "^3.19.0",
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb": "^15.0.1",
     "eslint-find-rules": "^1.14.3",
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-flowtype": "^2.33.0",
-    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "jest": "^20.0.3",
-    "prop-types": "^15.5.10",
     "react-test-renderer": "^15.5.4",
     "rimraf": "^2.6.1"
   }

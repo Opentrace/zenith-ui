@@ -6,10 +6,10 @@ import Styles from './Button.Styles';
 class Button extends React.Component {
   render() {
     const { children, inverse, raised, onClick, size } = this.props;
-    let styles = [
+    const styles = [
       Styles.base,
       Styles.sizing[size],
-      ...this.props.style
+      ...this.props.style,
     ];
     if (inverse) {
       styles.push(Styles.inverse);
@@ -21,7 +21,7 @@ class Button extends React.Component {
 
     return (
       <button
-        onClick={ this.props.onClick }
+        onClick={ onClick }
         style={ styles }>
         { children }
       </button>

@@ -23,10 +23,9 @@ const Styles = {
     zIndex: 1000,
     visibility: 'visible',
     opacity: 0,
-    backgroundColor: darken(baseGray, 0.5),
-    backgroundColor: fade(darken(baseGray, 0.5), .8),
+    backgroundColor: fade(darken(baseGray, 0.5), 0.8),
     animation: 'x 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards',
-    animationName: fadeIn
+    animationName: fadeIn,
   },
   inner: {
     borderRadius: globals.borderRadius,
@@ -40,7 +39,7 @@ const Styles = {
     boxShadow: shadows.default,
   },
   header: {
-    fontSize: 18
+    fontSize: 18,
   },
   title: {
     alignItems: 'center',
@@ -62,8 +61,8 @@ const Styles = {
     border: 'none',
     backgroundColor: white,
     fontSize: 24,
-    lineHeight: 1
-  }
+    lineHeight: 1,
+  },
 };
 
 export default Styles;

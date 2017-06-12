@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "react"
+  ],
+  parser: "babel-eslint",
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    },
+  },
+  "extends": ["airbnb-base"]
+}

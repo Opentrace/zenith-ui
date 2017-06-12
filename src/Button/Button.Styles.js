@@ -5,9 +5,8 @@ import typography from '../styles/typography';
 import spacing, { spacingKeys } from '../styles/spacing';
 import fontSizes, { fontSizeKeys } from '../styles/font-sizes';
 
-let sizing = {};
-for (const key of fontSizeKeys) {
-  const fontSizeIndex = fontSizeKeys.indexOf(key);
+const sizing = {};
+fontSizeKeys.forEach((key) => {
   const spacingIndex = spacingKeys.indexOf(key);
   let paddingTopBottom;
   let paddingRightLeft;
@@ -18,7 +17,7 @@ for (const key of fontSizeKeys) {
     paddingTopBottom = spacing[spacingKeys[spacingIndex - 2]];
     paddingRightLeft = spacing[spacingKeys[spacingIndex - 1]];
   }
-  sizing[key] ={
+  sizing[key] = {
     fontSize: fontSizes[key],
     lineHeight: 1,
     paddingTop: paddingTopBottom,
@@ -26,7 +25,7 @@ for (const key of fontSizeKeys) {
     paddingBottom: paddingTopBottom,
     paddingLeft: paddingRightLeft,
   };
-}
+});
 
 const Styles = {
   base: {
@@ -49,8 +48,8 @@ const Styles = {
     },
     '::-moz-focus-inner': {
       borderStyle: 'none',
-      padding: 0
-    }
+      padding: 0,
+    },
   },
   inverse: {
     backgroundColor: white,
@@ -60,12 +59,12 @@ const Styles = {
       backgroundColor: palette.primaryColor,
       color: white,
       borderColor: 'transparent',
-    }
+    },
   },
   raised: {
-    boxShadow: shadows.raised
+    boxShadow: shadows.raised,
   },
-  sizing: sizing
+  sizing,
 };
 
 export default Styles;

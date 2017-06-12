@@ -1,4 +1,3 @@
-import React from 'react';
 import Radium from 'radium';
 import Styles from './Dialog.Styles';
 
