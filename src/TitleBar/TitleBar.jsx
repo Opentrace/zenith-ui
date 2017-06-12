@@ -4,30 +4,46 @@ import PropTypes from 'prop-types';
 import Styles from './TitleBar.Styles';
 import { Grid, Cell } from '../Grid';
 
-class TitleBar extends React.Component {
-  render() {
-    const { title, subtitle, titleHeadingLevel, subtitleHeadingLevel, titleLink, children } = this.props;
-    const TitleHeading = `h${ titleHeadingLevel }`;
-    const SubtitleHeading = `h${ subtitleHeadingLevel }`;
-    return (
-      <div style={[ Styles.base ]}>
-        <Grid cellVerticalAlign="center">
-          {
-          title &&
-            <Cell>
-              <TitleHeading style={[ Styles.title ]}>
-                { titleLink ? <a style={[ Styles.title.link ] } href={ titleLink }>{ title }</a> : { title }}
-              </TitleHeading>
-            </Cell>
-          }
-          <Cell align="right">
-            { React.Children.map(children, (child) => React.cloneElement(child, { parent: 'titleBar' }))}
+const TitleBar = (props) => {
+  const { title, subtitle, titleHeadingLevel, subtitleHeadingLevel, titleLink, children } = props;
+  const styles = [
+    Styles.base,
+    ...props.style
+  ];
+  const TitleHeading = `h${ titleHeadingLevel }`;
+  return (
+    <div style={ styles }>
+      <Grid cellVerticalAlign="center">
+        {
+        title &&
+          <Cell>
+            <TitleHeading style={[ Styles.title ]}>
+              {
+                props.titleLink ?
+                <a style={[ Styles.title.link ] } href={ props.titleLink }>{ props.title }</a> :
+                props.title
+              }
+            </TitleHeading>
           </Cell>
-        </Grid>
-      </div>
-    );
-  }
+        }
+        <Cell align="right">
+          { React.Children.map(children, (child) => React.cloneElement(child, { parent: 'titleBar' }))}
+        </Cell>
+      </Grid>
+    </div>
+  );
 }
+
+// class TitleBar extends React.Component {
+//   render() {
+    
+//     const TitleHeading = `h${ titleHeadingLevel }`;
+//     const SubtitleHeading = `h${ subtitleHeadingLevel }`;
+//     return (
+      
+//     );
+//   }
+// }
 
 TitleBar.propTypes = {
   title: PropTypes.string,
@@ -41,6 +57,7 @@ TitleBar.defaultProps = {
   subtitle: null,
   titleHeadingLevel: 1,
   subtitleHeadingLevel: 2,
+  style: {}
 }
 
 export default Radium(TitleBar);

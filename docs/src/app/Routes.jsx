@@ -11,6 +11,7 @@ const Routes = (
   <App>
     <Route exact path="/" component={ Home }/>
     <Route path="/components/button" component={ ButtonPage } />
+    <Route path="/components/grid" component={ GridPage } />
   </App>
 );
 
