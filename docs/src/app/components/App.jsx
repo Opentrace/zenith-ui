@@ -1,5 +1,6 @@
 import React from 'react';
 import Radium, { StyleRoot } from 'radium';
+import NavigationBar from 'zenith-ui/NavigationBar';
 import Navigation from 'zenith-ui/Navigation';
 import ZenithRoot from 'zenith-ui/ZenithRoot';
 import { Grid, Cell } from 'zenith-ui/Grid';
@@ -9,14 +10,10 @@ import Styles from './App.Styles';
 
 const App = ({ children }) => (
   <ZenithRoot>
-    <TitleBar
-      title="Zenith-UI"
-      titleLink="#/">
-      <Navigation direction="horizontal">
-        <a href="#/components/button">Buttons</a>
-        <a href="#/components/grid">Grid</a>
-      </Navigation>
-    </TitleBar>
+    <NavigationBar title="Zenith-UI" titleLink="#/">
+      <a href="#/components/button">Buttons</a>
+      <a href="#/components/grid">Grid</a>
+    </NavigationBar>
     <Grid>
       <Cell width="1">{ children }</Cell>
     </Grid>

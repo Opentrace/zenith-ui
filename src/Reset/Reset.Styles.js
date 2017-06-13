@@ -6,7 +6,8 @@ const Styles = {
   body: {
     margin: 0,
     ...typography,
-    fontFamily: 'Open Sans, sans-serif'
+    fontFamily: 'Open Sans, sans-serif',
+    overflowX: 'hidden'
   },
   html: {
     background: '#fff',

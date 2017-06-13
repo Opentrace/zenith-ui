@@ -5,6 +5,7 @@ import Styles from './Button.Styles';
 
 class Button extends React.Component {
   render() {
+    console.log(this.props);
     const { children, inverse, raised, onClick, size } = this.props;
     const styles = [
       Styles.base,
@@ -34,11 +35,13 @@ Button.propTypes = {
   onClick: PropTypes.func,
 };
 
+
 Button.defaultProps = {
   inverse: false,
   size: 'medium',
   raised: false,
   onClick: () => {},
 };
+
 
 export default Radium(Button);
