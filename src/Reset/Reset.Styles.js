@@ -1,5 +1,6 @@
 import { palette } from '../styles/colors';
 import { baseFontSize } from '../styles/font-sizes';
+import spacing from '../styles/spacing';
 import typography from '../styles/typography';
 
 const Styles = {

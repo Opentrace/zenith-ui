@@ -3,7 +3,7 @@ import { fade } from '../utils/colorManipulator';
 import spacing from '../styles/spacing';
 import fontSizes from '../styles/font-sizes';
 import breakpoints from '../styles/breakpoints';
-
+console.log(spacing);
 const Styles = {
   base: {
     display: 'flex',
@@ -12,8 +12,10 @@ const Styles = {
     backgroundColor: palette.primaryColor,
     color: white,
     padding: spacing.tiny,
-    position: 'relative'
-
+    position: 'fixed',
+    top: 0,
+    height: spacing.huge,
+    width: '100%',
   },
   title: {
     marginRight: spacing.tiny,

@@ -1,11 +1,9 @@
 import React from 'react';
 import Radium, { StyleRoot } from 'radium';
 import NavigationBar from 'zenith-ui/NavigationBar';
-import Navigation from 'zenith-ui/Navigation';
 import ZenithRoot from 'zenith-ui/ZenithRoot';
 import { Grid, Cell } from 'zenith-ui/Grid';
 import Reset from 'zenith-ui/Reset';
-import TitleBar from 'zenith-ui/TitleBar';
 import Styles from './App.Styles';
 
 const App = ({ children }) => (
