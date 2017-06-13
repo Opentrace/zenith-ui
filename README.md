@@ -13,7 +13,7 @@ As components are added they will be checked off this list. That doesn't mean th
 - [x] Button
 - [x] Grid (flexbox layout)
 - [x] Modal/Dialog
-- [ ] Tooltip
+- [x] Tooltip
 - [ ] Menu
 - [ ] Dropdown
 - [ ] List
