@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'zenith-ui/Button';
 import Tooltip from 'zenith-ui/Tooltip';
+import Card from 'zenith-ui/Card';
 
 export default class Home extends React.Component {
 
@@ -13,8 +14,8 @@ export default class Home extends React.Component {
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempora molestiae, error laudantium aliquam eius temporibus iure esse necessitatibus doloremque! Eaque ratione error repellat quaerat dolores accusantium fugiat maxime cupiditate!
         </p>
-
-        <div>
+        <Card title="My Card" description="Card text" />
+        {/*<div>
           <Tooltip text="Tooltip top">
             <Button>
               Tooltip position: 'top'
@@ -44,7 +45,7 @@ export default class Home extends React.Component {
               Tooltip position: 'left'
             </Button>
           </Tooltip>
-        </div>
+        </div>*/}
       </div>
     );
   }
