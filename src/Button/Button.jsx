@@ -6,7 +6,6 @@ import Styles from './Button.Styles';
 class Button extends React.Component {
   render() {
     const { children, inverse, raised, onClick, size } = this.props;
-    console.log(Styles.sizing[size]);
     let styles = [
       Styles.base,
       Styles.sizing[size],

@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",
+    "material-design-icons": "^3.0.1",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.5.10",
     "radium": "^0.19.1",

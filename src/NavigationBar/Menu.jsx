@@ -3,8 +3,6 @@ import Radium from 'radium';
 import { Grid, Cell } from '../Grid';
 import Styles from './Menu.Styles';
 
-console.log(Styles);
-
 const Menu = ({ items }) => {
   return (
       <Grid>

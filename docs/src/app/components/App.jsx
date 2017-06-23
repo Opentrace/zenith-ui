@@ -11,8 +11,9 @@ const App = ({ children }) => (
     <NavigationBar title="Zenith-UI" titleLink="#/">
       <a href="#/components/button">Buttons</a>
       <a href="#/components/grid">Grid</a>
+      <a href="#/components/icon">Icon</a>
     </NavigationBar>
-    <Grid>
+    <Grid style={{ marginTop: 72 }}>
       <Cell width="1">{ children }</Cell>
     </Grid>
   </ZenithRoot>
