@@ -3,7 +3,7 @@ import { fade } from '../utils/colorManipulator';
 import spacing from '../styles/spacing';
 import fontSizes from '../styles/font-sizes';
 import breakpoints from '../styles/breakpoints';
-console.log(spacing);
+
 const Styles = {
   base: {
     display: 'flex',

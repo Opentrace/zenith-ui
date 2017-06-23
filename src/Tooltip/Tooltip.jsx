@@ -52,7 +52,6 @@ class Tooltip extends React.Component {
   }
 
   handleMouseMove(e) {
-    console.log(this);
     if (this.props.text === '') {
       return;
     }
