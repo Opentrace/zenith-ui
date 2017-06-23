@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'zenith-ui/Button';
 import Tooltip from 'zenith-ui/Tooltip';
 import Card from 'zenith-ui/Card';
+import { Grid, Cell } from 'zenith-ui/Grid';
 
 export default class Home extends React.Component {
 
@@ -14,7 +15,20 @@ export default class Home extends React.Component {
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempora molestiae, error laudantium aliquam eius temporibus iure esse necessitatibus doloremque! Eaque ratione error repellat quaerat dolores accusantium fugiat maxime cupiditate!
         </p>
-        <Card title="My Card" description="Card text" />
+        <Grid>
+          <Cell>
+            <Card title="Default Card" description="Default" />
+          </Cell>
+
+          <Cell>
+            <Card title="Warning Card" description="Warning" type="warning" />
+          </Cell>
+
+          <Cell>
+            <Card title="Info Card" description="Information" type="info" />
+          </Cell>
+        </Grid>
+        
         {/*<div>
           <Tooltip text="Tooltip top">
             <Button>
