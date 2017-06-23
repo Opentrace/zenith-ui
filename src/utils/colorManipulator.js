@@ -22,6 +22,12 @@ function clamp(value, min, max) {
   return value;
 }
 
+
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
 /**
  * Converts a color object with type and values to a string.
  *
@@ -79,6 +85,13 @@ export function convertHexToRGB(color) {
   };
 
   return `rgb(${values.r}, ${values.g}, ${values.b})`;
+}
+
+/**
+ * Converts a color from CSS rgb format to CSS hex format.
+ */
+export function convertRGBToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
 /**

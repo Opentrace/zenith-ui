@@ -15,3 +15,36 @@ export const palette = {
   secondaryTextColor: baseGray,
   primaryGray: baseGray,
 };
+
+export const defaultPalette = [
+  {
+    name: 'black',
+    r: 67,
+    g: 65,
+    b: 65
+  },
+  {
+    name: 'red',
+    r: 221,
+    g: 115,
+    b: 115
+  },
+  {
+    name: 'green',
+    r: 129,
+    g: 215,
+    b: 129
+  },
+  {
+    name: 'blue',
+    r: 67,
+    g: 155,
+    b: 221
+  },
+  {
+    name: 'yellow',
+    r: 255,
+    g: 235,
+    b: 138
+  },
+];

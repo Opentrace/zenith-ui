@@ -10,6 +10,7 @@ const App = ({ children }) => (
   <ZenithRoot>
     <NavigationBar title="Zenith-UI" titleLink="#/">
       <a href="#/components/button">Buttons</a>
+      <a href="#/components/color-palette">Color Palette</a>
       <a href="#/components/grid">Grid</a>
       <a href="#/components/icon">Icon</a>
     </NavigationBar>
