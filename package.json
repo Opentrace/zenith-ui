@@ -1,6 +1,6 @@
 {
   "name": "zenith-ui",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Very Opinionated React UI Components",
   "main": "./src/index.js",
   "repository": "https://github.com/Opentrace/zenith-ui.git",
