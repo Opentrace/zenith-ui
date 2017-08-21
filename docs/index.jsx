@@ -6,6 +6,7 @@ import { createRouter, createRoute, Route, Link } from 'react-roadway';
 
 import Home from './pages/Home';
 import Components from './pages/Components';
+import Card from './pages/Card';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
 
     <Home match="/" />
     <Components match="/components" />
+    <Card match="/components/card" />
 
     <footer>
       &copy; { (new Date).getFullYear() } <a href="http://opentrace.ca" target="_blank">Opentrace</a>.

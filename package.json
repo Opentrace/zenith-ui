@@ -16,10 +16,13 @@
     "test": "ava"
   },
   "dependencies": {
+    "palx": "^1.0.2",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-roadway": "^0.2.2"
+    "react-roadway": "^0.2.2",
+    "react-syntax-highlighter": "^5.6.3",
+    "styled-components": "^2.1.2"
   },
   "devDependencies": {
     "ava": "^0.21.0",

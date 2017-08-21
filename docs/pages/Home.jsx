@@ -1,5 +1,8 @@
+/* eslint-disable */
 import React from 'react';
 import { createRoute } from 'react-roadway';
+
+import { Card, CardContent, CardTitle } from 'zenith-ui';
 
 const Home = () => (
   <section>
@@ -8,6 +11,13 @@ const Home = () => (
     </header>
     <main>
       This is Zenith UI.
+
+      Card:
+
+      <Card>
+        <CardTitle title="Title" subtitle="Subtitle" />
+        <CardContent>This is a card.</CardContent>
+      </Card>
     </main>
   </section>
 );

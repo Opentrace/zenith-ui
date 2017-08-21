@@ -1,1 +1,4 @@
-export { default as Card } from './Card';
+import { Card, CardContent, CardTitle } from './Card';
+
+export { Card, CardContent, CardTitle };
+export default { Card };
