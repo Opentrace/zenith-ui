@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { createRoute } from 'react-roadway';
-
+import { Flex, Box } from 're-flex';
 import { Card, CardContent, CardTitle } from 'zenith-ui';
 
 const Home = () => (
@@ -14,10 +14,15 @@ const Home = () => (
 
       Card:
 
-      <Card>
-        <CardTitle title="Title" subtitle="Subtitle" />
-        <CardContent>This is a card.</CardContent>
-      </Card>
+      <Flex>
+        <Box width={ [1, [420, 1/3]] }>
+          <Card>
+            <CardTitle title="Title" subtitle="Subtitle" />
+            <CardContent>This is a card.</CardContent>
+          </Card>
+        </Box>
+      </Flex>
+      
     </main>
   </section>
 );
