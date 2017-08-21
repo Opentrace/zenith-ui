@@ -10,7 +10,7 @@
     "url": "https://github.com/Opentrace/zenith-ui/issues"
   },
   "scripts": {
-    "dist": "babel src -d dist",
+    "dist": "webpack --config webpack.dist.config.js",
     "docs": "webpack --devtool inline-source-map",
     "start": "webpack-dev-server --devtool inline-source-map --progress --colors --inline --hot --content-base docs",
     "test": "ava"
