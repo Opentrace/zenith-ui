@@ -10,12 +10,10 @@
     "url": "https://github.com/Opentrace/zenith-ui/issues"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production babel ./src --out-dir ./build --ignore spec.jsx",
-    "clean:build": "rimraf build",
-    "lint": "eslint src/**/*",
-    "prebuild": "npm run clean:build",
-    "deploy:docs": "cd docs && yarn build && cd ../ && git add docs/build && git commit -m \"rebuild docs\" && git subtree push --prefix docs/build origin gh-pages",
-    "test": "jest"
+    "dist": "babel src -d dist",
+    "docs": "webpack --devtool inline-source-map",
+    "start": "webpack-dev-server --devtool inline-source-map --progress --colors --inline --hot --content-base docs",
+    "test": "ava"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
