@@ -1,22 +1,25 @@
 /* eslint-disable */
 import React from 'react';
 import { render } from 'react-dom';
-import styles from './main.scss';
+import './main.scss';
+import { createRouter, createRoute, Route, Link } from 'react-roadway';
 
-const Demo = () => (
-  <div className={ styles.demo }>
-    <header className={ styles.demo__header }>
+import Home from './pages/Home';
+import Components from './pages/Components';
+
+const App = () => (
+  <div>
+    <header>
       <h1>Zenith UI</h1>
     </header>
 
-    <section className={ styles['demo__section'] }>
-      <header className={ styles['demo__section-header'] }>
-        <h2>Installation</h2>
-      </header>
-      <code className="prism-code">
-        npm install zenith-ui
-      </code>
-    </section>
+    <ul>
+      <li><Link href="/">Home</Link></li>
+      <li><Link href="/components">Components</Link></li>
+    </ul>
+
+    <Home match="/" />
+    <Components match="/components" />
 
     <footer>
       &copy; { (new Date).getFullYear() } <a href="http://opentrace.ca" target="_blank">Opentrace</a>.
@@ -24,4 +27,6 @@ const Demo = () => (
   </div>
 );
 
-render(<Demo />, document.getElementById('content'));
+const Router = createRouter(App);
+
+render(<Router />, document.getElementById('content'));
