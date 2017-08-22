@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { render } from 'react-dom';
-import { AppBar, palette } from 'zenith-ui';
+import { AppBar, Dropdown, DropdownContent, DropdownTrigger, palette } from 'zenith-ui';
 import { createRouter, createRoute, Route, Link } from 'react-roadway';
 
 import './main.scss';
@@ -16,13 +16,21 @@ const App = () => (
       <nav>
         <ul>
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/components">Components</Link></li>
+          <li>
+            <Dropdown>
+              <DropdownTrigger>Components</DropdownTrigger>
+              <DropdownContent>
+                <ul>
+                  <li><Link href="/components/card">Card</Link></li>
+                </ul>
+              </DropdownContent>
+            </Dropdown>
+          </li>
         </ul>
       </nav>
     </AppBar>
-    <header>
-      <h1>Zenith UI</h1>
-    </header>
+
+    
 
     <Home match="/" />
     <Components match="/components" />

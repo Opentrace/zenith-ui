@@ -56,16 +56,16 @@ export default styled(AppBar)`
     display: flex;
     align-items: center;
 
-    ul {
+    > ul {
       display: flex;
       margin: 0;
       padding: 0;
-      li {
+      > li {
         display: block;
         flex: 1;
         padding: 0 12px;
 
-        a {
+        > a {
           text-decoration: none;
           color: #fff;
 
@@ -76,9 +76,4 @@ export default styled(AppBar)`
       }
     }
   }
-
-  ${ props => `
-    ${ console.log(props) }
-  ` }
-  
 `;
