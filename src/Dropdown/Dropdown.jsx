@@ -26,7 +26,9 @@ class Dropdown extends React.Component {
         {
 
           React.Children.map(children, (child) => {
-            const childProps = child.props;
+            const childProps = {
+              ...child.props,
+            };
             if (child.type.displayName === 'DropdownTrigger') {
               childProps.onClick = this.toggleDropdown;
             } else {
@@ -48,7 +50,7 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   children: null,
-  open: true,
+  open: false,
 };
 
 export default Dropdown;

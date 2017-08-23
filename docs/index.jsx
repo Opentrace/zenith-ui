@@ -12,7 +12,7 @@ import Card from './pages/Card';
 
 const App = () => (
   <div>
-    <AppBar title="Zenith UI" withNav>
+    <AppBar title="Zenith UI">
       <nav>
         <ul>
           <li><Link href="/">Home</Link></li>

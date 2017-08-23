@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { boxShadow, fontFamily, palette } from '../globals';
 
-const AppBar = ({ title, subtitle, children, ...props }) => (
-  <header foo="bar" { ...props }>
+const AppBar = ({ title, location, subtitle, children, ...props }) => (
+  <header { ...props }>
     { title && <h1>{ title }</h1> }
     { subtitle && <h2>{ subtitle }</h2> }
     { children }

@@ -5,11 +5,14 @@ const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './docs/index.jsx',
+  entry: [
+  'webpack-dev-server/client?http://localhost:8081/',
+   'webpack/hot/dev-server',
+  './docs/index.jsx'],
   output: {
     path: path.join(__dirname, './docs/dist'),
     filename: 'index.js',
-    publicPath: '/dist/',
+    publicPath: "dist/"
   },
   module: {
     loaders: [
@@ -48,10 +51,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({ filename: 'main.css', allChunks: true }),
-    new webpack.optimize.UglifyJsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
