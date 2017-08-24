@@ -24,10 +24,11 @@ const server = new WebpackDevServer(compiler, {
   noInfo: false,
   publicPath: "/dist/",
   stats: {
-    colors: true,
-    progress: true
+    colors: true
   }
 });
 
-server.listen(8081, "localhost", function() {});
-app.listen(8080);
+server.listen(8081);
+app.listen(8080, () => {
+  console.log('Listening at http://localhost:8080');
+});
