@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const DropdownTrigger = ({ children, ...props }) => (
-  <a { ...props }>{ children }{ console.log(props) }</a>
+  <a { ...props }>{ children }</a>
 );
 
 DropdownTrigger.propTypes = {

@@ -9,6 +9,7 @@ import './main.scss';
 import Home from './pages/Home';
 import Components from './pages/Components';
 import Card from './pages/Card';
+import Dialog from './pages/Dialog';
 
 const App = () => (
   <div>
@@ -22,6 +23,7 @@ const App = () => (
               <DropdownContent>
                 <ul>
                   <li><Link href="/components/card">Card</Link></li>
+                  <li><Link href="/components/dialog">Dialog</Link></li>
                 </ul>
               </DropdownContent>
             </Dropdown>
@@ -35,6 +37,7 @@ const App = () => (
     <Home match="/" />
     <Components match="/components" />
     <Card match="/components/card" />
+    <Dialog match="/components/dialog" />
 
     <footer>
       &copy; { (new Date).getFullYear() } <a href="http://opentrace.ca" target="_blank">Opentrace</a>.
